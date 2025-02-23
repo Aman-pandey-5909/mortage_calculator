@@ -29,6 +29,7 @@ body {
     /* overflow: hidden; */
     background-color: #E3F4FC;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: var(--font-family);
