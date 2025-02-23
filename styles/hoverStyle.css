@@ -1,0 +1,32 @@
+.radiobtns:hover{
+    border: 1px solid #D9DB30;
+}
+
+
+.radiobtns:has(input[type="radio"]:checked) {
+    border: 1px solid #CBCE88;
+    background-color: #FAFAE0;
+    accent-color: #D7E029;
+}
+
+input[type="radio"]:checked {
+    appearance: none;
+    width: 10px; /* Set the size of the radio */
+    height: 10px;
+    border: 1px solid #999; /* Outer border */
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    /* transition: all 0.3s ease; */
+    background-color: #D7E029;
+    outline: 1px solid #000000;
+}
+
+input[type="number"]:hover {
+    border: 1.5px solid var(--border-color);
+}
+
+.btn:hover {
+    background-color: #EBEE97;
+}

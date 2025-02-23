@@ -1,0 +1,240 @@
+
+
+.calculator-container {
+    /* border: 2px solid black; */
+    display: flex;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
+    width: 60%;
+    margin: auto;
+    min-height: 70%;
+    border-radius: var(--border-radius);
+    background-color: var(--bg-calc);
+    overflow: hidden;
+}
+
+.leftCalculator, .rightResults {
+    width: 50%;
+    min-height: 100%;
+}
+
+.rightResults {
+    border-bottom-left-radius: 50px;
+    background-color: var(--bg-results);
+    min-height: 100%;
+}
+
+.leftCalculator {
+    display: flex;
+    flex-direction: column;
+    padding: var(--paddingY) var(--paddingX);
+}
+
+.topHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+}
+
+.heading {
+    color: var(--headingColor);
+}
+
+.clearAll {
+    background: transparent;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--normal-color);
+}
+
+label {
+    font-family: var(--font-family);
+    font-size: x-small;
+    font-weight: bold;
+    /* margin: 0 10px; */
+    color: var(--normal-color);
+    width: 100%;
+    /* color: var(--headingColor); */
+}
+
+#radiobtn {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid var(--border-color); */
+    align-items: start;
+    gap: 5px;
+}
+
+.radiobtns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: var(--padding-infield);
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease-in-out;
+    border-radius: 5px;
+}
+
+input{
+    color: var(--headingColor);
+    border-radius: 5px;
+    font-size: 21px;
+}
+
+#mAmount{
+    width: 90%;
+    padding: var(--padding-infield);
+    border: none;
+    outline: none;
+}
+
+.mAmount>div, .mTerm>div, .mRate>div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    overflow: hidden;
+}
+.mAmount {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.formSection {
+    margin-top: 10px;
+    height: 100%;
+    /* border: 1px solid var(--border-color); */
+}
+
+.mAmntlabel {
+    /* position: absolute; */
+    font-size: x-large;
+    /* border-right: 1px solid var(--border-color); */
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13%;
+    background-color: #DCEEF8;
+    padding: var(--padding-infield);
+}
+
+.mType, .mTerm, .mRate {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.midForm {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    /* overflow: hidden; */
+    /* border: 1px solid var(--border-color); */
+}
+
+#mterm, #mrate {
+    width: 90%;
+    padding: var(--padding-infield);
+    border: none;
+    outline: none;
+}
+
+.mratelabel, .mtermlabel {
+    font-size: large;
+    background-color: #DCEEF8;
+    /* border: 1px solid var(--border-color); */
+    width: fit-content;
+    height: 100%;
+    padding: 10px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 25px;
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: #D9DB30; 
+    color: var(--headingColor);
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.radiobtns > label {
+    /* border: 1px solid black; */
+    height: 100%;
+    padding: 3px;
+}
+
+.emptyResult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 100%;
+    margin: 0 20px;
+    /* border: 1px solid black; */
+}
+
+.filledResult {
+    display: none;
+    flex-direction: column;
+    padding: var(--paddingY) var(--paddingX);
+    height: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .midForm {
+        flex-direction: column;
+    }
+
+    .calculator-container {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .rightResults {
+        border-bottom-left-radius: 0px;
+    }
+    
+}
+
+@media screen and (max-width: 630px) {
+    .topHeading {
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+
+    body {
+        min-height: 100vh;
+    }
+
+    .calculator-container {
+        flex-direction: column;
+        overflow: scroll;
+        /* height: 100%; */
+    }
+
+    .rightResults {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .leftCalculator {
+        width: 100%;
+    }
+
+}

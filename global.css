@@ -1,0 +1,60 @@
+@import url(./styles/desktopStyle.css);
+@import url(./styles/hoverStyle.css);
+
+@font-face {
+    font-family: PlusJakartaSans;
+    src: url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf) format("truetype"),
+        url(./assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --paddingX: 30px;
+    --paddingY: 35px;
+    --border-radius: 30px;
+    --error-color: red;
+    --normal-color: #243a49a6;
+    --headingColor: #243A49;
+    --border-color: black;
+    --bg-calc: #FFFFFF;
+    --bg-results: #133040;
+    --font-family: PlusJakartaSans;
+    --padding-infield: 8px 15px;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    /* overflow: hidden; */
+    background-color: #E3F4FC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+    color: var(--normal-color);
+
+}
+
+p{
+    font-weight: bold;
+    font-size: xx-small;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* border: 1px solid var(--border-color); */
+    justify-content: space-around;
+    max-height: 100%;
+    overflow: auto;
+}
