@@ -26,7 +26,11 @@
 .leftCalculator {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
     padding: var(--paddingY) var(--paddingX);
+    height: 100%;
+    /* border: 1px solid black; */
 }
 
 .topHeading {
