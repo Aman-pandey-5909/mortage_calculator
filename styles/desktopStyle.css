@@ -6,20 +6,23 @@
     box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
     width: 60%;
     margin: auto;
-    min-height: 70%;
+    height: fit-content;
     border-radius: var(--border-radius);
     background-color: var(--bg-calc);
     overflow: hidden;
 }
 
-.leftCalculator, .rightResults {
+
+
+.cont {
+    /* border: 1px solid red; */
     width: 50%;
-    min-height: 100%;
 }
 
 .rightResults {
     border-bottom-left-radius: 50px;
     background-color: var(--bg-results);
+    width: 50%;
     min-height: 100%;
 }
 
@@ -30,6 +33,7 @@
     /* align-items: center; */
     padding: var(--paddingY) var(--paddingX);
     height: 100%;
+    width: 100%;
     /* border: 1px solid black; */
 }
 

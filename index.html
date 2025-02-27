@@ -30,86 +30,94 @@
       color: hsl(228, 45%, 44%);
     }
 
-    .pstyle{
-      color: #7B9BAE; font-size: xx-small;
+    .pstyle {
+      color: #7B9BAE;
+      font-size: xx-small;
     }
   </style>
 </head>
 
 <body>
   <div class="calculator-container">
-    <div class="leftCalculator">
-      <section class="topHeading">
-        <h1 class="heading">Mortgage Calculator</h1>
-        <button class="clearAll">Clear All</button>
-      </section>
-      <section class="formSection">
-        <form action="">
-          <div class="mAmount">
-            <p>Mortgage Amount</p>
-            <div>
-              <label class="mAmntlabel" for="mAmount">£</label>
-              <input  type="number" name="mAmount" id="mAmount">
-            </div>
-            <p class="mamterror"></p>
-          </div>
-          <div class="midForm">
-            <div class="mTerm">
-              <p>Mortgage Term</p>
+    <div class="cont">
+
+      <div class="leftCalculator">
+        <section class="topHeading">
+          <h1 class="heading">Mortgage Calculator</h1>
+          <button class="clearAll">Clear All</button>
+        </section>
+        <section class="formSection">
+          <form action="">
+            <div class="mAmount">
+              <p>Mortgage Amount</p>
               <div>
-                <input  type="number" name="mterm" id="mterm">
-                <label class="mtermlabel" for="mterm">years</label>
+                <label class="mAmntlabel" for="mAmount">£</label>
+                <input type="number" name="mAmount" id="mAmount">
               </div>
-              <p class="mtermerror"></p>
+              <p class="mamterror"></p>
             </div>
-            <div class="mRate">
-              <p>Interest Rate</p>
-              <div>
-                <input  type="number" name="mrate" id="mrate">
-                <label class="mratelabel" for="mrate">%</label>
+            <div class="midForm">
+              <div class="mTerm">
+                <p>Mortgage Term</p>
+                <div>
+                  <input type="number" name="mterm" id="mterm">
+                  <label class="mtermlabel" for="mterm">years</label>
+                </div>
+                <p class="mtermerror"></p>
               </div>
-              <p class="mrateerror"></p>
+              <div class="mRate">
+                <p>Interest Rate</p>
+                <div>
+                  <input type="text" name="mrate" id="mrate">
+                  <label class="mratelabel" for="mrate">%</label>
+                </div>
+                <p class="mrateerror"></p>
+              </div>
             </div>
-          </div>
-          <div class="mType">
-            <p>Mortgage Type</p>
-            <div id="radiobtn">
-              <section class="radiobtns">
-                <input type="radio" name="mType" value="repayment" id="repayment">
-                <label  for="repayment">Repayment</label>
-              </section>
-              <section class="radiobtns">
-                <input type="radio" name="mType" value="interest" id="interest">
-                <label for="interest">Interest Only</label>
-              </section>
+            <div class="mType">
+              <p>Mortgage Type</p>
+              <div id="radiobtn">
+                <section class="radiobtns">
+                  <input type="radio" name="mType" value="repayment" id="repayment">
+                  <label for="repayment">Repayment</label>
+                </section>
+                <section class="radiobtns">
+                  <input type="radio" name="mType" value="interest" id="interest">
+                  <label for="interest">Interest Only</label>
+                </section>
+              </div>
+              <p class="mtypeerror"></p>
             </div>
-            <p class="mtypeerror"></p>
-          </div>
-          <div class="submitbtn">
-            <button class="btn" type="submit">
-              <img src="./assets/images/icon-calculator.svg" alt="calc">
-              <span>Calculate Repayments</span>
-            </button>
-          </div>
-        </form>
-      </section>
+            <div class="submitbtn">
+              <button class="btn" type="submit">
+                <img src="./assets/images/icon-calculator.svg" alt="calc">
+                <span>Calculate Repayments</span>
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
     </div>
     <div class="rightResults">
       <div class="emptyResult">
         <img src="./assets/images/illustration-empty.svg" alt="">
         <p style="color: white; font-size: large;">Results shown here</p>
-        <p style="color: #7B9BAE; text-align: center; font-size: xx-small;">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+        <p style="color: #7B9BAE; text-align: center; font-size: xx-small;">Complete the form and click "calculate
+          repayments" to see what your monthly repayments would be.</p>
       </div>
       <div class="filledResult">
         <h1 style="color: white; display: flex; align-items: center; font-size: x-large;">Your results</h1>
-        <p class="pstyle">Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again. </p>
-        <div style="border-top: 4px solid #D2DA46; margin-top: 30px; padding: 15px; border-radius: 7px; background-color: #0E2431; height: fit-content;">
+        <p class="pstyle">Your results are shown below based on the information you provided. To adjust the results,
+          edit the form and click "calculate repayments" again. </p>
+        <div
+          style="border-top: 4px solid #D2DA46; margin-top: 30px; padding: 15px; border-radius: 7px; background-color: #0E2431; height: fit-content;">
           <p class="pstyle">Your monthly repayments</p>
-          <span style="color: #D7DD3F; font-size: xxx-large; font-weight: bold;">£<span id="monthlyRepayment">0</span></span>
+          <span style="color: #D7DD3F; font-size: xxx-large; font-weight: bold;">£<span
+              id="monthlyRepayment">0</span></span>
           <div style="background-color: #2B414E; padding: 1px; border-radius: 7px; margin: 30px 0;"></div>
           <p class="pstyle">Total you'll repay over the term</p>
           <span style="color: white; font-size: x-large; font-weight: bold;">£<span id="totalRepayment">0</span></span>
-          
+
         </div>
       </div>
     </div>

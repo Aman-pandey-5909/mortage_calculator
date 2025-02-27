@@ -23,7 +23,7 @@ input[type="radio"]:checked {
     outline: 1px solid #000000;
 }
 
-input[type="number"]:hover {
+input[type="number"]:hover, input[type="text"]:hover {
     border: 1.5px solid var(--border-color);
 }
 
